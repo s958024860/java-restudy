@@ -20,7 +20,7 @@ public class Test {
         // 获取文件的后缀
         String prefix = fileName.substring(index + 1);
         // 判断必须包含"."号，且不能出现在首位，同时后缀名为"java"
-        if (  index > -1 && "java".equals(prefix)                               ) {
+        if (index > -1 && "java".equals(prefix)) {
             System.out.println("Java文件名正确");
         } else {
             System.out.println("Java文件名无效");
@@ -43,7 +43,7 @@ public class Test {
         if (index2 != -1 && index3 > index2) {
             System.out.println("邮箱格式正确");
         } else {
-            System.out.println("邮箱格式无效");
+
         }
     }
 }
