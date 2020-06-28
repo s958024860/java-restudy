@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.songfz.personal.mapper.MemberMapper">
+
+    <select id="getMemberInfoList" resultType="com.songfz.personal.dto.MemberInfoDto">
+        select
+            id,
+            name,
+            sex,
+            phone_no,
+            address,
+            first_order_time,
+            recent_order_time
+        from member_info
+        order by recent_order_time desc
+    </select>
+
+</mapper>

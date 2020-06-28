@@ -1,12 +1,11 @@
 package com.songfz.personal.controller;
 
-import com.songfz.personal.dto.MemberInfoDto;
+import com.songfz.personal.common.Response;
 import com.songfz.personal.service.MemberService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import javax.annotation.Resource;
 
 /**
  * @Author: fzsong3
@@ -16,11 +15,11 @@ import java.util.List;
 @RestController
 public class MemberController {
 
-    @Autowired
+    @Resource
     private MemberService memberService;
 
     @GetMapping("/member/list")
-    public List<MemberInfoDto> getMemberInfoList() {
-        return memberService.getMemberInfoList();
+    public Response getMemberInfoList() {
+        return new Response(memberService.getMemberInfoList());
     }
 }
